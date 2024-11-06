@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <cstring>
 
 class Macara {
@@ -9,7 +9,7 @@ public:
     static int numarMacarale;
     double* razaActiune;
 
-    // Constructor f?r? parametri
+    // Constructor fără parametri
     Macara() : inaltimeMaxima(30), razaActiune(new double(10.0)) {
         tip = "Necunoscuta";
         capacitate = 0;
@@ -23,14 +23,14 @@ public:
         numarMacarale++;
     }
 
-    // Constructor cu to?i parametrii
+    // Constructor cu toți parametrii
     Macara(std::string tip, int capacitate, double raza) : inaltimeMaxima(30), razaActiune(new double(raza)) {
         this->tip = tip;
         this->capacitate = capacitate;
         numarMacarale++;
     }
 
-    // Func?ie static? pentru afi?area num?rului de macarale
+    // Funcție statică pentru afișarea numărului de macarale
     static int getNumarMacarale() {
         return numarMacarale;
     }
@@ -49,7 +49,7 @@ public:
     static int numarLopeti;
     int* adancimeSapare;
 
-    // Constructor f?r? parametri
+    // Constructor fără parametri
     LopataHidraulica() : greutate(200), adancimeSapare(new int(5)) {
         material = "Necunoscut";
         capacitateIncarcare = 0;
@@ -63,14 +63,14 @@ public:
         numarLopeti++;
     }
 
-    // Constructor cu to?i parametrii
+    // Constructor cu toți parametrii
     LopataHidraulica(std::string material, int capacitate, int adancime) : greutate(200), adancimeSapare(new int(adancime)) {
         this->material = material;
         this->capacitateIncarcare = capacitate;
         numarLopeti++;
     }
 
-    // Func?ie static? pentru afi?area num?rului de lope?i
+    // Funcție statică pentru afișarea numărului de lopeți
     static int getNumarLopeti() {
         return numarLopeti;
     }
@@ -89,7 +89,7 @@ public:
     static int numarMasini;
     double* consumCombustibil;
 
-    // Constructor f?r? parametri
+    // Constructor fără parametri
     MasinaTransport() : vitezaMaxima(120), consumCombustibil(new double(0.0)) {
         model = "Necunoscut";
         capacitate = 0;
@@ -103,14 +103,14 @@ public:
         numarMasini++;
     }
 
-    // Constructor cu to?i parametrii
+    // Constructor cu toți parametrii
     MasinaTransport(std::string model, int capacitate, double consum) : vitezaMaxima(120), consumCombustibil(new double(consum)) {
         this->model = model;
         this->capacitate = capacitate;
         numarMasini++;
     }
 
-    // Func?ie static? pentru afi?area num?rului de ma?ini de transport
+    // Funcție statică pentru afișarea numărului de mașini de transport
     static int getNumarMasini() {
         return numarMasini;
     }
@@ -125,7 +125,7 @@ int main() {
     // Testare clasa Macara
     Macara macara1;
     Macara macara2("Turn", 500);
-    Macara macara3("Mobil?", 300, 15.0);
+    Macara macara3("Mobilă", 300, 15.0);
 
     std::cout << "Numar total de macarale: " << Macara::getNumarMacarale() << std::endl;
 
